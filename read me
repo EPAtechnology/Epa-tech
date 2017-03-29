@@ -1,0 +1,11 @@
+Step 1: Hardware Setup
+
+I have a Raspberry Pi Model B (Rev-1), GY521 (InvenSense MPU6050), breadboard & some male-female wire.
+
+*Connect Raspberry Pi 3V3 to GY521 VCC
+
+*Connect Raspberry Pi GND to GY521 GND
+
+*Connect Raspberry Pi SCL to GY521 SCL
+
+*Connect Raspberry Pi SDA to GY521 SDA
