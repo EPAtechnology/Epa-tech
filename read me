@@ -9,3 +9,26 @@ I have a Raspberry Pi Model B (Rev-1), GY521 (InvenSense MPU6050), breadboard & 
 *Connect Raspberry Pi SCL to GY521 SCL
 
 *Connect Raspberry Pi SDA to GY521 SDA
+
+Step 2: Workflow
+
+*Install I2C dev library. Under Raspbian, use
+
+sudo apt-get install libi2c-dev
+*Configure I2C pins using adafruit guide
+
+*Install wiringPi using https://projects.drogon.net/raspberry-pi/wiringpi/download-and-install/ 
+
+*Make sure your Raspberry Pi can detect the device attached to the I2C interface.
+
+If detected, then you will see an address with below command. In my case, the address is 0x68 which is then used in the code.
+
+i2cdetect -y 0 # Rev 1 
+i2cdetect -y 1 # Rev 2
+*Use this sample code from my github
+
+*Use the Makefile and type
+
+$make i2ctest
+$sudo ./i2ctest
+You should now see the sensor data value in the screen.
